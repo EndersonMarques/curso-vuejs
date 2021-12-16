@@ -8,6 +8,8 @@
         <span v-on:mousemove.stop> PARAR AQUI !!! </span>
     </p>
     <a v-on:click.prevent="naoNavegar" href="http://www.google.com"> Google</a>
+    <hr />
+    <input type="text" v-on:keyup.enter.alt="exibirAlerta" />
 </div>
 
 <script>
@@ -32,6 +34,9 @@
             },
             naoNavegar(e) {
                 console.log('Nao navegar')
+            },
+            exibirAlerta(e) {
+                alert('Alerta')
             }
         },
     });
